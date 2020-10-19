@@ -1,0 +1,21 @@
+POWER BI
+https://docs.microsoft.com/pt-br/power-bi/connect-data/power-bi-data-sources
+
+https://docs.microsoft.com/pt-br/power-bi/connect-data/desktop-data-source-prerequisites
+
+https://docs.microsoft.com/pt-br/power-bi/connect-data/desktop-enhanced-dataset-metadata
+
+https://docs.microsoft.com/pt-br/power-bi/connect-data/desktop-directquery-about
+
+IMPORTANTE
+•	Durante a experiência de Obter Dados, o conjunto de tabelas selecionado define cada uma das consultas que retornará um conjunto de dados. Essas consultas podem ser editadas antes do carregamento dos dados, por exemplo, para aplicar filtros, agregar os dados ou unir tabelas diferentes.
+•	Após o carregamento, todos os dados definidos por essas consultas serão importados para o cache do Power BI.
+•	Com a criação de um visual no Power BI Desktop, os dados importados serão consultados. O repositório do Power BI garante que a consulta será rápida. Todas as alterações no visual são refletidas imediatamente.
+•	As alterações nos dados subjacentes não são refletidas em nenhum visual. É necessário atualizar para reimportar os dados.
+•	Após a publicação do relatório como um arquivo .pbix no serviço do Power BI, um conjunto de dados é criado e carregado no serviço do Power BI. Os dados importados são incluídos no conjunto de dados. Em seguida, é possível agendar a atualização desses dados, por exemplo, para reimportar os dados todos os dias. Dependendo da localização da fonte de dados original, poderá ser necessário configurar um gateway de dados local.
+•	Ao abrir um relatório existente no serviço do Power BI ou criar um relatório, os dados importados são consultados novamente, garantindo a interatividade.
+•	Páginas inteiras de relatório ou visuais podem ser fixadas como blocos de dashboard. Os blocos são atualizados automaticamente sempre que o conjunto de dados subjacente é atualizado.
+
+
+
+*DÁ PARA TRABALHAR COM PYTHON

@@ -1,0 +1,1 @@
+Detalhes: a API Vulkan não monitora todos os tipos de placas de video apenas uma lista curta todas da AMD

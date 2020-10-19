@@ -1,0 +1,173 @@
+.conteudo-perfil{
+    padding-top: 70px;
+    color: white;
+    float: left;
+
+}
+
+.conteudo-perfil h2{
+    margin-bottom: 5px;
+}
+
+
+.Informa{
+    margin-left: 350px;
+    transition: all .5s;
+    margin-right: 25px;
+}
+
+.Informa.muda04{
+    margin-left: 90px;
+   
+}
+
+
+.dados{
+    border-bottom: 2px solid #4360b5;
+    font-weight: bold;
+    width: 650px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+   
+}
+
+.dados span{
+    margin-left: 10px;
+  outline: none;
+}
+
+.conteiner-altera{
+    width: 280px;
+    margin-bottom: 10px;
+    float: left;
+    margin-top: 170px;
+    transition: all .5s;
+
+}
+
+.imagem-perfil{
+    height: 250px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid #4360b5;
+    background-image: url('../Imagem/persona.png');
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+.fa-pencil-square-o{
+    color: white;
+    font-size: 30px;
+    z-index: 1;
+    background-color: #4360b5;
+    float: right;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.conteiner-altera.muda-imagem{
+    margin-left: 90px;
+    
+}
+
+.btn-perfil{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #4360b5;
+    color: white;
+    font-size: 20px;
+    border: 0;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all .5s;
+    
+
+}
+
+
+#altera_senha{
+    display: none;
+}
+
+
+
+.conteiner-senha{
+    width:  650px;
+    height: auto;
+    margin: auto;
+    padding-top: 200px;
+}
+
+.input-senha{
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid #4360b5;
+    background-color: transparent;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 10px;
+
+}
+
+.mensagem-erro{
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+@media (max-width: 1024px){
+    .conteiner-altera{
+        margin-left: 350px;
+        margin-top: 10px;
+
+    }
+
+    
+.conteiner-senha{
+    width:  400px;
+}
+
+}
+
+@media (max-width: 858px){
+    .dados{
+    width: 70%;
+    }
+   
+    .conteiner-altera.muda-imagem{
+        margin-top: 10px;
+        margin-left: 90px;
+        height: 190px;
+    }
+
+    .conteiner-senha{
+        width:  200px;
+    }
+
+
+}
+
+@media(max-width: 400px) {
+
+    .dados{
+        width: 60%;
+        font-size: 10px;
+        }
+
+        .conteiner-altera{
+       width: 60%;
+    }
+
+   
+
+        .dados span{
+            margin-left: 5px; 
+        }
+}

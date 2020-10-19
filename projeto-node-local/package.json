@@ -1,0 +1,13 @@
+{
+  "name": "meuleitor-arduino",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node enviar-dados-banco.js"
+  },
+  "dependencies": {
+    "serialport": "~9.0.0",
+    "events": "~3.1.0",
+    "mssql": "~6.2.0"
+  }
+}

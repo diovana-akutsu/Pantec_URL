@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+    padding: 10px 50px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    color: blue;
+}
+
+.voltar{
+   
+    font-size: 20px;
+}

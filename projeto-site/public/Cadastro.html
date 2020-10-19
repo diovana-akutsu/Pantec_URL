@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./CSS/Estilo_cadastro.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./bootstrap-4.5.2-dist/css/bootstrap.min.css">
+
+    <script src="JavaScript/jquery-3.5.1.min.js"></script>
+    <script src="JavaScript/bundle.js"></script>
+
+    <link rel="icon" href="./Imagem/panda-icon.png">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <!-- cadastro do cliente -->
+    <a href="./index.html"><i class="fa fa-chevron-circle-left seta_voltar" aria-hidden="true"></i></a>
+    <form id="form_cadastro" method="post" name="formuser" onsubmit="return cadastrar()">
+        <img src="./Imagem/usuario-removebg-preview-removebg-preview__1_-removebg-preview.png" alt="">CADASTRO
+        <div id="div_formulario" class="form-group">
+            <label for="exampleInputName1">Nome Completo</label><br>
+            <input type="text" name="nome" name=" nome " class="nome rounded-pill">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Endereço de Email</label><br>
+            <input type="email" name="login" class="rounded-pill">
+            <small id="emailHelp" class="form-text text-muted">Nunca compartilhe seu email e senha.</small>
+        </div>
+
+        <div class=" form-group">
+            <label for="cep">CEP</label><br>
+            <input type="text" name="cep" class="rounded-pill" id="cep1">
+            <button type="button" class="btn button btn-outline-info my-sm-1"
+                onclick="consultaCep()">Consultar</button><br>
+            <div class="form-text text-muted">Digite o cep sem "." ou "-"</div>
+        </div>
+        <div class="form-group">
+            <label for="logradouro">Logradouro</label><br>
+            <input type="text" class="rounded-pill" name="logradouro">
+        </div>
+        <div class="form-group">
+            <label for="numero">Número</label><br>
+            <input type="text" class="rounded-pill" name="numero">
+        </div>
+        <div class="form-group">
+            <label for="bairro">Bairro</label><br>
+            <input type="text" class="rounded-pill" name="bairro">
+        </div>
+        <div class="form-group">
+            <label for="cidade">Cidade</label><br>
+            <input type="text" class="rounded-pill" name="cidade">
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone</label><br>
+            <input type="text" class="rounded-pill" name="telefone">
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha</label><br>
+            <input type="password" name="senha" class="rounded-pill">
+        </div>
+        <div class="form-group">
+            <label for="confirmacao">Confirmação da senha</label><br>
+            <input type="password" name="confirmacao" class="rounded-pill">
+        </div>
+        <input id="termos" type="checkbox" checked required>
+        <label class="form-text text-muted">
+            Você concorda com nossos
+            <a href="termos.html">Termos, Política de Dados e Política de Cookies</a>.</label>
+        <span id="mensagemErro"></span>
+        <button id="btn_entrar" class="btn align-middle btn-outline-info my-sm-1"
+            onclick="return validar ()">Cadastrar</button>
+    </form>
+    <!-- SETA INDICANDO VOLTAR LADO ESQUERDO NA DIV AZUL MARINHO TOPO -->
+
+</body>
+
+</html>
+<script>
+
+    function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+
+                window.location.href = 'login.html';
+
+            } else {
+                console.log('Erro de cadastro!');
+                finalizar_aguardar();
+                validar();
+            }
+        });
+
+        return false;
+    }
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        div_erro.style.display = 'block';
+    }
+    function validar() {
+        var nome = form_cadastro.nome.value;
+        var email = form_cadastro.login.value;
+        var senha = form_cadastro.senha.value;
+        var confirmacao = form_cadastro.confirmacao.value;
+        var number = form_cadastro.numero.value;
+        var cep = form_cadastro.cep.value;
+        mensagemErro.innerHTML = "";
+        if (nome == "" || nome.length < 3) {
+            mensagemErro.innerHTML += 'Preencha o nome do campo <br>';
+        }
+
+        if (email == "" || email.indexOf('@') == - 1) {
+            mensagemErro.innerHTML += 'Preencha o campo E-mail <br>';
+        }
+
+        if (number == "") {
+            mensagemErro.innerHTML += 'Prencha o campo número<br>';
+        }
+        if (cep != cep.length == 8) {
+            mensagemErro.innerHTML += 'Prencha o campo cep com 8 digítos<br>';
+        }
+
+        if (senha == "" || senha.length <= 5) {
+            mensagemErro.innerHTML += 'Preencha o campo senha com minimo 6 caracteres <br>';
+        }
+
+        if (senha != confirmacao) {
+            mensagemErro.innerHTML += 'Senhas não conferem<br>';
+        }
+    }
+</script>

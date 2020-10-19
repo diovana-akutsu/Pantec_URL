@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.imagem {
+    width: 100%;
+    /*o elemento ajustará automaticamente sua altura para permitir que seu conteúdo seja exibido corretamente.*/
+    height: auto;
+    background-image: url('../Imagem/imagem01.png');
+    background-position: center;
+    /*imagem é renderizada, para caber na div imagem*/
+    background-size: cover;
+    /*define a distância do conteudo e a borda,ou seja, marge interna*/
+    padding-top: 150px;
+    padding-bottom: 120px;
+    text-align: center;
+    /*Chamamos a variavel cor*/
+    border-bottom: 5px solid var(--set-color);
+}
+
+
+/*seleciona os elementos com base em suas posições em um grupo de elementos*/
+
+.texto-imagem p:nth-child(1) {
+    /*Negrito*/
+    font-weight: bold;
+    /*Tamanho da fonte*/
+    font-size: 30px;
+    /*controla o espaçamento entre as linhas*/
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.texto-imagem p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.btn-imagem {
+    width: 170px;
+    height: 30px;
+    /*contorno azul some*/
+    outline: none;
+    border-radius: 20px;
+    /*cursor em forma de mão*/
+    cursor: pointer;
+    font-weight: bold;
+    /*Tempo de duração da transição*/
+    transition: 0.4s;
+    background-color: transparent;
+    border: 0;
+    /*Efeitos de sombra em volta de um elemento, lembrete o ultimo define a intensidade*/
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, 1),
+    2px  2px 6px  rgba(0, 0, 0, 0.2);
+}
+
+
+/*Ao clicar muda a sombra do elemento*/
+
+.btn-imagem:active {
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.conteudo {
+    width: 100%;
+    height: auto;
+    color: var(--second-color);
+    /*define a distância do conteudo e a borda,ou seja, marge interna*/
+    padding: 100px 100px 0;
+}
+
+.conteudo P {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.div-valores {
+    width: 100%;
+    /*navegador seleciona uma margem adequada para utilizar, ou seja, centaliza mais facil*/
+    height: auto;
+    margin: 50px auto;
+    /*justify-content é empregada para alinhar os elementos ao longo do eixo principa*/
+    justify-content: space-around;
+    /*contêiner flexível, ou seja, reorganizando-se e acordo com a necessidade*/
+    display: flex;
+    flex-direction: row;
+    /*A propriedade flex-flow é uma subpropriedade do módulo de layout de caixa flexível*/
+    flex-flow: wrap;
+    /*Especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado*/
+    /*conteúdo é cortado e nenhuma barra de rolagem é exibida.*/
+    overflow: hidden;
+}
+
+.caixa-valores {
+    width: 22%;
+    height: 290px;
+    margin: 5px;
+    background-color: var(--quint-color);
+    color: var(--second-color);
+    font-size: 27px;
+    align-items: center;
+    text-align: center;
+    /*Isso é util quando ficar responsivo*/
+    overflow: hidden;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+
+/*Tamanho icone */
+
+.caixa-valores i {
+    font-size: 170px;
+    margin-top: 30px;
+    transition-duration: 0.9s;
+}
+
+.caixa-valores p {
+    margin-top: 80px;
+    padding: 30px;
+    /*seta*/
+    cursor: default;
+
+}
+
+
+.caixa-valores:hover p{
+    margin-top: 0px;
+    font-size: 13px;
+}
+.caixa-valores:hover {
+    background: var(--set-color);
+    opacity: 1;
+}
+
+
+/* :HOVER FUNCIONA DA SEGUINTE MANEIRA, QUANDO O CURSOR DO MOUSE
+-- PASSAR PELO ELEMENTO DESCRITO (que no caso é a tag a, ou o nosso botão)
+-- ELE SERÁ ATIVADO, ENTÃO SIGNIFIA QUE A LINHA 59 PEDE PARA QUE QUANDO
+-- O ELEMENTO FOR "FOCADO" ELE COLOCA A OPACITY(TRANSPARENCIA) PARA 1(100%)
+-- E O TAMANHO DA FONTE AUMENTA PARA 16 PIXELS */
+
+.caixa-valores:hover i {
+    transform: scale(0.5);
+    font-size: 75px;
+}
+
+
+/*Missão e visão*/
+
+.div-frase-braca {
+    width: 100%;
+    height: auto;
+    background: var(--second-color);
+    padding: 50px 100px 50px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.div-frase-braca h3 {
+    text-align: center;
+}
+
+.icone-frase-branca {
+    height: 150px;
+}
+
+.caixa_botoes {
+    width: 35%;
+    height: 45px;
+    margin: 35px auto 0;
+    position: relative;
+    box-shadow: 0 0 20px 9px #cccccc65;
+    border-radius: 30px;
+}
+
+.cor_botoes {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: var(--set-color);
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.btn-frases {
+    width: 48%;
+    margin-top: 15px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    /*canto superior esquerdo do elemento, ou seja, posição em relação a si mesmo*/
+    position: relative;
+    font-weight: bold;
+}
+
+
+/*# estou fazendo alterações pelo id*/
+
+#visao_display {
+    display: none;
+    /*Defini a duração da animação e cria ela*/
+    animation: Mostrar 4s;
+}
+
+#missao_display {
+    animation: Mostrar 4s;
+}
+
+
+/*mudança crucial da animação*/
+
+@keyframes Mostrar {
+    /*De 0 para 1*/
+    from {
+        /*transparência de um elemento,ou seja, o grau no qual o background atrás do elemento é sobreposto*/
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*Sobre*/
+
+.conteudo h2 {
+    color: var(--set-color);
+}
+
+.historia img {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    height: 310px;
+    padding: 10px;
+    /*especifica o tamanho das imagens de fundo*/
+    background-size: cover;
+    border: 2px solid var(--set-color);
+    border-radius: 100%;
+    /*Criei uma animação com nome imagem-gota*/
+    /*Defini a duração da animação*/
+    /*Quantas vezes essa animação será repetida*/
+    animation: imagem-gota 6s .6s infinite cubic-bezier(1, 0.15, .29, 1.21) alternate;
+    /*Uma curva Cúbica de Bezier é definida por quatro pontos P0, P1, P2 e P3. P0 e P3 são o 
+    -início e o fim da curva e, no CSS esses pontos são fixos porque as coordenadas são razões. 
+    -P0 é (0, 0) e representa o tempo inicial e o estado inicial, P3 é (1, 1) e representa o tempo 
+    -final e o estado final.*/
+}
+
+
+/*mudança crucial da animação*/
+
+@keyframes imagem-gota {
+    0% {
+        border-radius: 100% 100% 0 100%;
+    }
+    25% {
+        border-radius: 100% 0 100% 100%;
+    }
+    50% {
+        border-radius: 100% 100% 100% 0;
+    }
+    75% {
+        border-radius: 0 100% 100% 100%;
+    }
+    100% {
+        border-radius: 100%;
+    }
+}
+
+
+/*Nossa fotos*/
+
+.h2-time {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.caixa-time {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    /*justify-content é empregada para alinhar os elementos ao longo do eixo principa*/
+    justify-content: space-around;
+    /*contêiner flexível, ou seja, reorganizando-se e acordo com a necessidade*/
+    display: flex;
+    flex-direction: row;
+    /*A propriedade flex-flow é uma subpropriedade do módulo de layout de caixa flexível*/
+    flex-flow: wrap;
+}
+
+.time {
+    width: 25%;
+    height: auto;
+    margin: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    border: 2px solid var(--set-color);
+    text-align: center;
+    background-color: var(--quint-color);
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+
+/*Mudança ao passar o mouse*/
+
+.time:hover {
+    opacity: 0.8;
+}
+
+.time img {
+    width: 50%;
+    border-radius: 100%;
+}
+
+.time h3 {
+    margin: 5%;
+}
+
+.icone_time {
+    margin: 3%;
+    background-color: var(--set-color);
+    padding: 3%;
+    border-radius: 100%;
+    cursor: pointer;
+    color: var(--terc-color);
+    transition: 0.4s;
+}
+
+.icone_time:hover {
+    color: var(--second-color);
+}
+
+
+/*Serviço*/
+
+.div-ser {
+    width: 100%;
+    height: auto;
+    background-color: var(--second-color);
+    padding-bottom: 60px;
+}
+
+.texto-ser {
+    width: 50%;
+    border-right: 3px solid var(--set-color);
+    padding-right: 5%;
+    text-align: right;
+    float: left;
+}
+
+.texto-ser p {
+    color: var(--terc-color);
+}
+
+.texto-ser button {
+    margin-top: 10%;
+}
+
+
+/*Video do youtube por link*/
+
+.video {
+    width: 45%;
+    height: 300px;
+    margin-left: 5%;
+}
+
+/*Funções do projeto*/
+
+.gifts {
+    width: 20%;
+    margin: 0 10%;
+}
+
+.caixa-fuc {
+    width: 50%;
+}
+
+.flutua-dir {
+    float: left;
+}
+
+.flutua-esq {
+    float: right;
+}
+
+.caixa-fuc h3 {
+    margin-top: 15%;
+    margin-bottom: 15%;
+    font-size: large;
+    color: rgba(255, 255, 255, 0.644);
+}
+
+.caixa-fuc span {
+    color: var(--set-color);
+}
+
+
+.caixa-viabilidade{
+    width: 35%;
+    background: var(--sext-color);
+    color: var(--quint-color);
+    height: 450px; 
+    border-radius: 20px;
+    margin: 70px auto;
+    padding: 5%;
+     /*A propriedade clear do CSS especifica se um elemento pode ter
+	 -elementos flutuantes ao seu lado ou se devem ser movidos para abaixo dele (clear). 
+	 -Essa propriedade se aplica à elementos flutuantes ou não flutuantes. */
+    clear: left;
+    text-align: center;
+}
+
+.b_financeiro{
+    color: var(--quint-color);
+}
+
+.inputs{
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    box-shadow:  inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset  2px  2px 6px  rgba(0, 0, 0, 0.1);
+    background: transparent;
+}
+
+
+#mensagem{
+    text-align: justify;
+    margin-bottom: 15%;
+}
+.cadastro_calculadora{
+    display: none;
+    margin: auto;
+} 
+
+
+/*Alterção de acordo com o tamanho da tela*/
+
+@media(max-width: 1224px) {
+    .caixa-valores {
+        width: 40%;
+    }
+}
+
+@media (max-width: 952px) {
+    .conteudo {
+        padding: 30px;
+    }
+    .div-frase-braca {
+        font-size: 15px;
+        padding: 40px;
+    }
+    .div-ser {
+        padding-bottom: 0;
+    }
+
+    .texto-ser {
+        border-right: 0;
+        border-bottom: 3px solid var(--set-color);
+        width: 100%;
+    }
+    .texto-ser button {
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+    .video {
+        width: 100%;
+        height: 300px;
+        margin-left: 0;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 750px) {
+    .caixa-valores {
+        width: 100%;
+        padding: 8px;
+    }
+    .caixa_botoes {
+        width: 70%;
+    }
+    .time {
+        width: 50%;
+    }
+
+    .caixa-viabilidade{
+        width: 100%;
+        padding: 7%;
+    }
+}
+
+@media(max-width: 600px) {
+    .historia img {
+        padding: 20px;
+        width: 90%;
+        height: 350px;
+        padding: 5px;
+    }
+    .caixa_botoes {
+        width: 90%;
+    }
+    .time {
+        width: 100%;
+    }
+    .gifts {
+        width: 100%;
+        margin: auto;
+    }
+    .caixa-fuc {
+        width: 100%;
+    }
+}

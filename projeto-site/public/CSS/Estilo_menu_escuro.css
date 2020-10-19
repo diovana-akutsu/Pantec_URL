@@ -1,0 +1,296 @@
+/*Link para importa icone*/
+
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    /*Tira o estilo da lista, ou seja, a bolinha*/
+    list-style: none;
+    /*A propriedade CSS box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos.*/
+    box-sizing: border-box;
+}
+
+
+/*Importei a fonte*/
+
+@font-face {
+    font-family: 'fonte';
+    src: url('../good-times/good\ times\ rg.ttf');
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    background-color: var(--terc-color);
+}
+
+
+/*tamanho do menu*/
+
+
+/*Define a largura da barra de rolagem*/
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+
+/*Define a fundo da barra de rolagem*/
+
+::-webkit-scrollbar-track {
+    background-color: var(--quint-color);
+}
+
+
+/*Define a cor da barra de rolagem*/
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+}
+
+.nav {
+    background: var(--terc-color);
+    height: 81px;
+    width: 100%;
+    /*fixed o elemento “responde”, em termos de layout, ao navegador*/
+    position: fixed;
+    border-bottom: 5px solid var(--primary-color);
+    z-index: 2;
+}
+
+
+/*formatação do titulo*/
+
+label.pantec {
+    color: var(--second-color);
+    /*Negrito*/
+    font-weight: bold;
+    /*Tamanho da fonte*/
+    font-size: 37px;
+    /*controla o espaçamento entre as linhas*/
+    line-height: 80px;
+    margin-left: 100px;
+    font-family: fonte;
+    text-shadow: 0.1em 0.1em 0.2em var(--primary-color);
+}
+
+.nav ul {
+    float: right;
+    margin-right: 100px;
+    margin-top: -6px; 
+}
+
+.nav ul li {
+    /*Comparado a display: inline, a principal diferença é que display: inline-block permite definir uma largura e altura no elemento.*/
+    display: inline-block;
+    /*controla o espaçamento entre as linhas*/
+    line-height: 80px;
+    /*Tempo da transição*/
+    transition: .5s;
+    margin-top: 0;
+    cursor: pointer;
+}
+.nav ul li a , .modos{
+    color: var(--second-color);
+    /*Letra maiúsculas*/
+    text-transform: uppercase;
+    font-size: 20px;
+    /*define a distância do conteudo e a borda,ou seja, marge interna*/
+    padding: 7px 15px;
+    
+}
+.aqui01{
+    background: var(--primary-color);
+    
+    }
+    .outras{
+        background: var(--terc-color);
+    }
+.modos{
+    margin-left: 20px;
+    background-color:var(--second-color);
+    height: 25px;
+    width: 80px;
+    margin-top: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    padding-bottom: 25px;
+    display: inline-block;
+    /*controla o espaçamento entre as linhas*/
+    line-height: 74px;
+    /*Tempo da transição*/
+
+}
+.lua{
+    display: none;
+}
+.sol{
+    float: left;
+    color: var(--quint-color);
+    margin-top: -30px;
+}
+.circulo{
+    float: right;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--terc-color);
+
+}
+.nav ul li:hover {
+    background: var(--primary-color);
+}
+
+.icone {
+    font-size: 30px;
+    color: var(--second-color);
+    float: right;
+    /*controla o espaçamento entre as linhas*/
+    line-height: 80px;
+    margin-right: 30px;
+    /*Curso de dedinho*/
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.marge-final {
+    width: 100%;
+    padding-bottom: 10%;
+    background-color: var(--quint-color);
+    padding-top: 5%;
+}
+
+
+/*Tamanho do mapa link*/
+
+.mapa {
+    width: 55%;
+    height: 270px;
+}
+
+.conteudo {
+    width: 100%;
+    height: auto;
+    color: var(--second-color);
+    /*define a distância do conteudo e a borda,ou seja, marge interna*/
+    padding: 100px 100px 0;
+}
+
+
+.conteudo P {
+    text-align: justify;
+    font-size: 18px;
+}
+
+/*Sobre*/
+
+.conteudo h2 {
+    color: var(--primary-color);
+}
+
+
+.marge-final p {
+    font-size: 17px;
+    text-align: right;
+}
+
+.marge-final h2 {
+    font-size: 17px;
+}
+
+.dados-contato {
+    margin-right: 2%;
+    text-align: right;
+    float: left;
+}
+
+.icone-final {
+    float: right;
+    font-size: 40px;
+    color: #555555;
+    cursor: pointer;
+}
+
+.icone-final i:hover {
+    color: var(--second-color);
+}
+
+
+/*Ao mudar o tamanho da tela altera essas classe*/
+
+@media (max-width: 952px) {
+    label.pantec {
+        font-size: 30px;
+        margin-left: 40px;
+    }
+    .nav ul li a {
+        font-size: 16px;
+    }
+    .nav ul {
+        margin-right: 50px;
+    }
+
+    .conteudo {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 858px) {
+    .icone {
+        display: block;
+    }
+    .nav ul {
+        /*fixed o elemento “responde”, em termos de layout, ao navegador*/
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--primary-color);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    .nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .nav ul li a {
+        font-size: 20px;
+    }
+    /*Mudança ao passar o mouse, exceto/vai ficar estabelecido no hover na tag a com classe active*/
+    .nav ul li a:hover{
+        background: none;
+        border-bottom: 4px solid black;
+    }
+
+    .aqui01 a{ 
+        border-bottom: 4px solid black;
+    }
+    /*Ao clicar a ul vai aparecer na página*/
+    /*Pegamos o id */
+    #check:checked~ul {
+        left: 0;
+    }
+    .dados-contato {
+        float: none;
+        text-align: center;
+    }
+    .marge-final p {
+        text-align: center;
+    }
+    .icone-final {
+        float: left;
+        font-size: 30px;
+    }
+    .mapa {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+}

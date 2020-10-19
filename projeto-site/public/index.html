@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" id="estilo_site" href="./CSS/Estilo_Site_escuro.css">
+    <link rel="stylesheet" id="estilo_menu" href="./CSS/Estilo_menu_escuro.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./JavaScript/bundle.js"></script>
+
+    <!--Panda como icone-->
+    <link rel="icon" href="./Imagem/panda-icon.png">
+
+    <title>PANTEC</title>
+    <style>       
+
+    </style>
+</head>
+
+<body>
+    <div class="nav nab">
+
+        <input type="checkbox" id="check">
+
+        <!--<label> representa uma legenda para um item em uma interface de usuário-->
+        <label for="check" class="icone">
+
+            <!--Icone fonte-->
+            <i class="fa fa-bars" aria-hidden="true"></i>
+
+        </label>
+
+        <label class="pantec">Pantec</label>
+
+        <!--Lista-->
+        <ul>
+            <!--Itens organizados assim pelo fato de gerar um espaçamento-->
+            <li id="opt_home">
+                <a href="#" id="txt_home">Início</a>
+            </li><li id="opt_about">
+                <a href="#sobre"id="txt_about">Sobre</a>
+            </li><li id="opt_service">
+                <a href="#servico"id="txt_service">Serviços</a>
+            </li><li><a href="contato.html">Contato</a></li><div class="modos" onclick="fn_muda_tema()"><div class="circulo"></div><div class="lua">☾</div><div class="sol">☼</div></div>
+            
+        </ul>
+    </div>
+    <!--Imagem depois do menu-->
+    <div class="imagem">
+
+        <div class="texto-imagem">
+
+
+            <p>Experimentar é o novo planejar.</p>
+
+            <p>Desenvolvemos o software do seu jeito.</p>
+
+       
+        </div>
+
+    </div>
+
+    <div class="conteudo">
+
+        <p>Nossa organização está preparada e atenta para às oportunidades e desafios atuais.<br> Somos um time forte e com grande criatividade e vamos focar no desenvolvimento de soluções estratégica e sustentáveis, para estabelecer um amanhã melhor que
+            hoje.
+        </p>
+
+        <!--Caixa de valores-->
+        <div class="div-valores">
+
+            <div class="caixa-valores">
+                <i class="fa fa-cogs" aria-hidden="true"></i>
+                <h5>Inovação</h5>
+                <p>Nós buscamos contantemente soluções para problemas e necessidades tanto internos, quanto externos (dos nossos clientes e do mercado).</p>
+            </div>
+
+            <div class="caixa-valores">
+                <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                <h5>Confiança</h5>
+                <p>Valorizamos a confiança, afinal quando o time confia na história da empresa, seus valores e líderes, todos trabalham mais motivados.</p>
+            </div>
+
+            <div class="caixa-valores">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <h5>Diversidade</h5>
+                <p>Procuramos ser uma empresa com grande diversidade, ou seja, temos uma variedade de colaboradores e sempre buscamos a Inclusão social.</p>
+            </div>
+
+            <div class="caixa-valores">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                <h5>Qualidade</h5>
+                <p>A nossa empresas foca na qualidade máxima em todos os processos, produção e serviços, com baixo impacto ambiental.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--Missão e visão-->
+    <div class="div-frase-braca">
+
+
+
+        <div id="missao_display">
+            <h3>Missão<br><img src="./Imagem/missão.png" class="icone-frase-branca"></h3>
+
+            Tornar-se uma das principais empresas fornecedoras de soluções de software, atendendo as necessidades de nossos clientes sempre com, excelência em qualidade, transparência e pontualidade.
+        </div>
+
+        <div id="visao_display">
+            <h3>Visão<br><img src="./Imagem/visão.png" class="icone-frase-branca"></h3>
+            Acreditamos que as melhores soluções de tecnologia são aquelas que refletem perfeitamente a realidade do mercado e do negócio, melhorando e automatizando processos de negócio de nossos clientes.
+        </div>
+
+        <!--Botões que ocorrem a mudança-->
+        <div class="caixa_botoes">
+
+            <div id="mudar" class="cor_botoes"></div>
+
+            <button onclick="visao()" class="btn-frases" type="button">Misão</button>
+            <button onclick="misao()" class="btn-frases" type="button">Visão</button>
+
+        </div>
+
+    </div>
+
+    <!--Sobre-->
+    <section id="sobre" class="conteudo">
+        <div class="historia">
+            <h2>Conheça um pouco mais sobre a nossa história:</h2>
+            <br>
+
+            <!--Predio-->
+            <img src="./Imagem/Empresa_predio.jpg">
+            <p>Somos uma Startup que desempenha um papel proativo no processo de desenvolvimento do Brasil. Fundada em 2020 por cinco profissionais da área de T.I, a PANTEC surgiu com o objetivo de auxiliar as empresas aumentando a eficiência, competitividade
+                e oportunidades de negócios.
+                <br><br> Atualmente localizada na Rua Haddock Lobo, 595 a companhia se tornou uma empresa especializada em soluções estratégicas e inovadoras de software. Desde fevereiro de 2020 vem ganhando destaque no mercado Brasileiro, com seus sistemas
+                que visam a redução de custos e otimização de tempo de seus clientes.
+            </p>
+        </div>
+
+        <!--Nossas fotos e nomes-->
+        <h2 class="h2-time"> Time de Desenvolvedores:</h2>
+
+        <div class="caixa-time">
+
+            <div class="time">
+                <img src="./Imagem/alex.png">
+
+                <h3>Alexander<br> RA: 01201001</h3>
+
+                <!--Icones redes sociais-->
+                <i class="fa fa-instagram icone_time" aria-hidden="true"></i>
+                <i class="fa fa-twitter icone_time" aria-hidden="true"></i>
+                <i class="fa fa-linkedin icone_time" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp icone_time" aria-hidden="true"></i>
+
+            </div>
+
+            <div class="time">
+                <img src="./Imagem/Dio.jfif">
+
+                <h3>Diovanna<br> RA: 01201018</h3>
+
+                <!--Icones redes sociais-->
+                <i class="fa fa-instagram icone_time" aria-hidden="true"></i>
+                <i class="fa fa-twitter icone_time" aria-hidden="true"></i>
+                <i class="fa fa-linkedin icone_time" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp icone_time" aria-hidden="true"></i>
+            </div>
+
+
+            <div class="time">
+                <img src="./Imagem/leo.jfif">
+
+                <h3>Leonardo <br> RA: 01201030</h3>
+
+
+                <!--Icones redes sociais-->
+                <i class="fa fa-instagram icone_time" aria-hidden="true"></i>
+                <i class="fa fa-twitter icone_time" aria-hidden="true"></i>
+                <i class="fa fa-linkedin icone_time" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp icone_time" aria-hidden="true"></i>
+            </div>
+
+
+            <div class="time">
+                <img src="./Imagem/sarah.jfif">
+
+                <h3>Sarah<br> RA: 01201096</h3>
+
+                <!--Icones redes sociais-->
+                <i class="fa fa-instagram icone_time" aria-hidden="true"></i>
+                <i class="fa fa-twitter icone_time" aria-hidden="true"></i>
+                <i class="fa fa-linkedin icone_time" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp icone_time" aria-hidden="true"></i>
+            </div>
+
+            <div class="time">
+                <img src="./Imagem/vitoria.jfif">
+
+                <h3>Vitoria Reis<br> RA: 01201113</h3>
+
+                <!--Icones redes sociais-->
+                <i class="fa fa-instagram icone_time" aria-hidden="true"></i>
+                <i class="fa fa-twitter icone_time" aria-hidden="true"></i>
+                <i class="fa fa-linkedin icone_time" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp icone_time" aria-hidden="true"></i>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--Serviço-->
+    <section id="servico" class="div-ser">
+        <div class="conteudo">
+            <div class="texto-ser">
+
+                <h2>SIEG SYSTEM</h2><br>
+                <p style="font-size: 14px;">O Sieg System é um sistema informatizado de monitoramento de maquinas que são utilizados na área de produção multimídia (pode ser utilizado para outros fins), nós da Pantec visamos, junto de nosso aplicativo reduzir atrasos em demandas abertas e, também, oferecer aos usuários e empresas hipoteses de melhoria a partir de um hardware já existente (com a possibilidade de outras ofertas), melhorando assim a experiencia do usuário reduzindo as dores de cabeça por travamentos ocasionados pela ausência/obsolidade de componentes minimos para a execução de suas atividades! </p>
+                <button onclick="window.location.href='./Login.html'" class="btn-imagem">Login</button>
+            </div>
+
+            <!--Link do youtube-->
+            <iframe class="video" src="https://www.youtube.com/embed/OwSz-PghGPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+    
+</section>
+
+
+        <!--Gifts e funções-->
+    <div class="conteudo">
+
+
+
+        <div class="caixa-fuc flutua-dir">
+
+            <h3> <span>"</span>Monitora algumas características de hardware e de processamento do seu computador.<span>"</span></h3>
+
+        </div>
+        <img class="gifts flutua-dir" src="./Imagem/hardware.gif">
+
+
+
+
+        <div class="caixa-fuc flutua-esq">
+            <h3> <span>"</span>Permite checar a performance dos arquivos de sistemas, processamento multimídia e muito mais.<span>"</span></h3>
+        </div>
+        <img class="gifts flutua-esq" src="./Imagem/graficos.gif">
+
+
+
+
+        <div class="caixa-fuc flutua-dir ">
+            <h3> <span>"</span>Melhoram o desempenho do computador, aumentando a sua segurança e otimizando seu desempenho.<span>"</span></h3>
+        </div>
+
+        <img class="gifts flutua-dir" src="./Imagem/computador.gif">
+
+        
+    <!-- Calculadora financeira -->
+      <div class="caixa-viabilidade" id="caixa_viabilidade">
+          <div id="conteudo1">
+        <h2>Viabilidade financeira</h2><br>
+        <b class="b_financeiro">Cálculo de uma estimativa de seu lucro com o nosso serviço.</b>
+
+            <input id="nome" class="inputs" type="text" placeholder="Nome da empresa" required>
+            <input id="maquinas_valor" class="inputs" type="text" placeholder="Quantidade de máquinas" required>
+            <input id="renda_valor" class="inputs" type="text" placeholder="Renda mensal da empresa" required>
+          <br><br>
+            <button onclick="calcular()" class="btn-imagem">Verificar</button>
+        </div>
+            <div id="conteudo2" class="conteudo2">
+                <div id="mensagem"></div>
+                <button onclick="window.location.href='./Cadastro.html'" id="cadastro_calculadora" class="cadastro_calculadora btn-imagem">
+                    Cadastro
+                </button>
+            </div>
+      </div>
+    </div> 
+    
+
+
+    <div id="contato" class="marge-final">
+        <div class="conteudo">
+
+
+            <!--Mapa-->
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2860955087513!2d-46.663726685022354!3d-23.55816618468445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d2a5270055%3A0x3c7ea4f4c7d51fb6!2sRua%20Haddock%20Lobo%2C%20595%20-%20Cerqueira%20C%C3%A9sar%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001414-001!5e0!3m2!1spt-BR!2sbr!4v1598755842826!5m2!1spt-BR!2sbr"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+            <!--Icone rede-->
+            <div class="icone-final">
+                <i class="fa fa-github-square" aria-hidden="true"></i><br>
+                <i class="fa fa-twitter-square" aria-hidden="true"></i><br>
+                <i class="fa fa-google-plus-square" aria-hidden="true"></i><br>
+                <i class="fa fa-facebook-official" aria-hidden="true"></i> <br>
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </div>
+
+            <!--Dados de contato-->
+            <div class="dados-contato">
+
+
+                <h2>Telefone</h2>
+                <p>
+                    (11) 4XXX-XXXX<br> (11) 9XXXX-XXXX
+                </p>
+                <br>
+
+                <h2>Email</h2>
+
+                <p>
+                    NOME@GMAIL.COM<br> NOME@BANDTEC.COM
+                </p>
+                <br>
+
+                <h2>Endereço</h2>
+                <p>
+                    R. HADDOCK LOBO, 595
+                </p>
+                <br>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+<script> 
+    function calcular(){
+        var maquinas = Number(maquinas_valor.value);
+        var renda = Number(renda_valor.value);
+        // 15 é a porcentagem que o cliente poderá ganhar com nosso produto.
+        var porcentagem = (renda * 15) / 100;
+        //Este 10 é o preço de nosso serviço por máquina.
+        var servico = maquinas * 10;
+
+        conteudo1.style.display = "none";
+
+        cadastro_calculadora.style.display = "block";
+
+        mensagem.innerHTML = `Atualmente a ${nome.value} tem a renda mensal de ${renda},
+        e possui ${maquinas} máquinas, com o serviço da Pantec dariamos um lucro de até 15% em sua renda
+        mensal visando a produtividade da equipe com o bom desenvolvimento das máquinas operando suas
+        atividades, assim evitando atrasos de demandas e ganhando mais confiança de seus clientes.
+        Tendo em vista todos benefícios que podemos lhe oferecer nosso serviço custará ${servico} para
+        a ${nome.value}. Caso esteja interessado realize o cadastro.`;
+        mensagem.style.fontSize="0.9em";
+    }
+</script>
+
+<script type="text/javascript">
+    window._chatlio = window._chatlio||[];
+    !function(){ var t=document.getElementById("chatlio-widget-embed");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page", "open", "showOrHide"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3");
+       n.setAttribute('data-widget-id','9f891482-d9a0-4a99-6f65-d07fcbd564ec');
+       c.parentNode.insertBefore(n,c);
+    }();
+</script>
+

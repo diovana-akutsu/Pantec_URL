@@ -1,0 +1,23 @@
+Controle da Execução(help desk): Diovana
+Metodologia e Especificação:  Vitoria
+GitHub Atualizado: (todos)
+Documentação Atualizada:(todos)
+Diagrama de Solução:HLD-  Leonardo   LLD-  Leonardo
+Diagrama do BD:   Alexander
+Dashboard Estático:   Leonardo
+Protótipos dos Módulos: Front Swing(Login + Adicionais)-   Diovana        Dashboard Estático-   Vitoria
+USO da API Listar Processos, CPU, Memória e Disco: Alexander
+USO da API Listar Info Hardware:  Sarah
+Protótipo Funcional do OSHI: Sarah
+Jar inicial rodando em Linux VM:  Alexander
+Projeto individual:(todos)
+Telas Swing: Diovana
+BPMN:  Vitoria
+Mockup de Tela:   Sarah-feito
+Diagrama de Solução de Software: Leonardo
+Jar inicial de 1 Tela swing:   Diovana
+
+Funcionalidades do usuario(front)/menu: Vitoria
+Http requisições func.usu(back): Alexander
+ES6: Sarah- feito
+

@@ -1,0 +1,1 @@
+http://manpages.ubuntu.com/manpages/bionic/en/man1/lshw.1.html
